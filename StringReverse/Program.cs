@@ -16,14 +16,17 @@ namespace StringReverse
             string sample = "This is a test string.";
 
             // Use the reverse method and place in an array of char
-            char[] backward = sample.Reverse().ToArray();
+            //char[] backward = sample.Reverse().ToArray();
 
-            foreach (char chr in backward)
-            {
-                Console.Write(chr);
-            }
+            //foreach (char chr in backward)
+            //{
+            //    Console.Write(chr);
+            //}
 
-            Console.WriteLine();
+            //Console.WriteLine();
+
+            outReverse(sample);
+           
 
             // from an array of strings, print the strings in reverse order & the chars in the array in reverse order
 
@@ -31,14 +34,16 @@ namespace StringReverse
 
             for (int i = testTwo.Length -1; i >= 0; i--)
             {
-                backward = testTwo[i].Reverse().ToArray();
+                //backward = testTwo[i].Reverse().ToArray();
 
-                foreach (char chr in backward)
-                {
-                    Console.Write(chr);
-                }
+                //foreach (char chr in backward)
+                //{
+                //    Console.Write(chr);
+                //}
 
-                Console.WriteLine();
+                //Console.WriteLine();
+
+                outReverse(testTwo[i]);
 
             }
 
@@ -46,7 +51,23 @@ namespace StringReverse
             Console.ReadLine();
            
         }
+
+        // make a method to take a string and print it in reverse
+        private static void outReverse(string instring)
+        {
+            // Use the reverse method and place in an array of char
+            char[] backward = instring.Reverse().ToArray();
+
+            foreach (char chr in backward)
+            {
+                Console.Write(chr);
+            }
+            Console.WriteLine();
+
+        }
     }
+
+
 
 
 }
